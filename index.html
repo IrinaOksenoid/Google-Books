@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output/main.css">
+    <!-- <link rel="stylesheet" href="output/font.css"> -->
+    </head>
+<body>
+    <header>
+        <section class="header__wrap">
+            <h1 class="header__logo">Bookshop</h1>
+            <div class="header__navigation">
+                <ul class="navigation__menu">
+                    <li class="navigation__page navigation__page_active">
+                        <a href="#">books</a>
+                    </li>
+                    <li class="navigation__page">
+                        <a href="#">audiobooks</a>
+                    </li>
+                    <li class="navigation__page">
+                        <a href="#">Stationery & gifts</a>
+                    </li>
+                    <li class="navigation__page">
+                        <a href="#">blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__icons">
+                <img src="./output/images/user.svg" alt="Пользователь">
+                <img src="./output/images/search.svg" alt="Поиск">
+                <img src="./output/images/shop-bag.svg" alt="Корзина">
+                <div class="header__counter">0</div>
+            </div>
+        </section>
+    </header>
+    <section class="slider">
+        <img class="slider__image" alt="">
+        <div class="slider__dots">
+            <span class="slider__dot slider__dot-active"></span>
+            <span class="slider__dot"></span>
+            <span class="slider__dot"></span>
+        </div>
+    
+        <section class="promo-first">
+            <a href="#">Change old book on new</a>
+            <img src="./output/images/arrow.svg" alt="Акция">
+        </section>
+        <section class="promo-second">
+            <a href="#">top 100 books 2022</a>
+            <img src="./output/images/arrow.svg" alt="Акция">
+        </section>
+    </section>
+    <main>
+        <div class="categories__back"></div>
+        <section class="gallery">
+        <aside class="gallery__categories">
+            <ul class="categories__list">
+                <li class="categories__item category__active">Architecture</li>
+                <li class="categories__item">Art & Fashion</li>
+                <li class="categories__item">Biography</li>
+                <li class="categories__item">Business</li>
+                <li class="categories__item">Crafts & Hobbies</li>
+                <li class="categories__item">Drama</li>
+                <li class="categories__item">Fiction</li>
+                <li class="categories__item">Food & Drink</li>
+                <li class="categories__item">Health & Wellbeing</li>
+                <li class="categories__item">Humor</li>
+                <li class="categories__item">Poetry</li>
+                <li class="categories__item">Psychology</li>
+                <li class="categories__item">Science</li>
+                <li class="categories__item">Technology</li>
+                <li class="categories__item">Travel & Maps</li>
+            </ul>
+        </aside>
+        <section class="gallery__wrap">
+            <div class="gallery__content">
+            </div>
+            <button class="gallery__load">
+                Load more
+            </button>
+        </section>
+    </section>
+</main>
+<script src="./output/main.js" defer></script>
+</body>
+</html>

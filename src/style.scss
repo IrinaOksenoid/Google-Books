@@ -1,0 +1,408 @@
+@import "variables";
+@import "font.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    position: fixed;
+        top: 0;
+        left:0;
+        right: 0;
+        z-index: 2;
+    .header__wrap{
+        background-color: #FFFFFF;
+        padding: $header-padding;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        .header__logo {
+            font-size: 24px;
+            color: $base-headsColor; 
+            font-family: 'Montserrat';
+            font-size: 24px;
+            font-weight: 700;
+            margin-left:  10px;
+        }
+        .header__navigation{
+            padding: 0 20px;
+        }
+        .navigation__menu{
+            max-width: 342px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            gap:20px;
+            .navigation__page a{
+                text-decoration: none; 
+                font-family: 'Montserrat';
+                font-size: 10px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $base-fontColor;
+                &:hover{
+                    color: #4C3DB2 ;
+                }
+                        }
+            .navigation__page_active a{
+                font-weight: 900;
+            }
+        }
+        .header__icons{
+            margin-right: 10px;
+            width: 120px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            cursor: pointer;           
+            
+            .header__counter{
+                display: none;
+                position: absolute;
+                z-index: 1;
+                left: 112px;
+                top: 8px;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background-color: #FF353A;
+                color: #FFFFFF;
+                font-family: 'Montserrat';
+                font-size: 10px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.slider{
+    position: relative;
+    margin-top: 116px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .promo-first{
+        width: 149px;
+        height: 204px;
+        background-color: $base-violet;
+        box-shadow: 5px 24px 36px rgba(53, 49, 84, 0.28);
+        position: absolute;
+        top: 79px;
+        right: 74px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+            a {
+                text-decoration: none;
+                color: #1C2A39;
+                font-size: 18px;
+                font-family: 'Montserrat';
+                font-weight: 700;
+                text-transform: uppercase;
+                padding-top: 92px;
+                padding-left:  20px;
+                padding-right: 20px;
+            }
+        img {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        } 
+    }
+
+    @media screen and (max-width: 620px) {
+        .promo-first{
+            width: 100px;
+            height: 170px;
+            box-shadow: 5px 14px 16px rgba(53, 49, 84, 0.28);
+            top: 59px;
+            right: 50px;
+            a {
+                font-size: 16px;
+                padding-left:  18px;
+                padding-top: 42px;
+                               
+            }
+          } 
+        }
+
+    .promo-second{
+        width: 158px;
+        height: 243px;
+        background-color: #FF8FE6;
+        box-shadow: 5px 24px 36px rgba(53, 49, 84, 0.28);
+        position: absolute;
+        top: 359px;
+        right: -20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+            a {
+                text-decoration: none;
+                color: #1C2A39;
+                font-size: 18px;
+                font-family: 'Montserrat';
+                font-weight: 700;
+                text-transform: uppercase;
+                padding-top: 139px;
+                padding-left:  20px;
+                padding-right: 47px;
+                
+            }
+        img {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    @media screen and (max-width: 620px) {
+        .promo-second{
+            width: 108px;
+            height: 143px;
+            box-shadow: 5px 14px 16px rgba(53, 49, 84, 0.28);
+            top: 279px;
+            right: -20px;
+            a {
+                font-size: 16px;
+                padding-top: 39px;
+                padding-left:  18px;
+                               
+            }
+          } 
+        }
+    .slider__image{
+        max-width: 100%;
+        height: auto;
+    }
+    .slider__dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 18px 30px;
+        height: 13px;
+    
+    
+        .slider__dot {
+            height: 12px;
+            width: 12px;
+            background-color: #EFEEF6;
+            border-radius: 50%;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+        .slider__dot-active{
+            background-color: $base-violet;
+        }
+    }
+    
+}
+
+main{
+   position: relative;
+   margin: 150px 10px auto 10px;
+    .gallery{
+        max-width: 1140px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: start;
+        align-content: start;
+    }
+    @media screen and (max-width: 620px) {
+        .gallery{
+            flex-direction: column;
+            align-items: center;
+          } 
+        }
+    
+        .categories__back{
+            background-color: #EFEEF6;
+            position: absolute;
+            width: 410px;
+            height: 710px;
+            left: 0;
+            top: -35px;
+            z-index: -1;
+        }
+}
+
+@media screen and (max-width: 620px) {
+    main{
+        
+       margin-top: 50px;
+}}
+.gallery__categories{
+    
+    .categories__list{
+        
+        list-style: none;
+        line-height: 40px;
+        
+        li{
+            color: #5C6A79 ;
+            font-size: 12px;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            width: auto;
+            text-align: left;
+            position: relative;
+            white-space: nowrap;
+            cursor: pointer;
+            &:hover{
+                color: #4C3DB2 ;
+            }
+        }
+        .category__active{
+            font-weight: 700;
+            color: #1C2A39;
+            font-size: 16px;
+            
+        &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #756AD3;
+            border-radius: 50%;
+            position: absolute;
+            left: -14px; 
+            top: 40%;
+            }
+        }
+    }
+    
+}
+
+.gallery__wrap{
+    margin-top: 12px;
+    margin-left: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+        button{
+        background-color: white;
+        border: 1px solid #4C3DB2;
+        color: #4C3DB2;
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 8px;
+        text-transform: uppercase;
+        border-radius: 0;
+        width: 176px;
+        height: 45px;
+        &:hover{
+            cursor: pointer;
+            background-color: #EEEDF5;
+        }
+    }
+    .gallery__load{
+        margin: 80px 0;
+        align-self: center;
+    }
+    .gallery__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 420px));
+        grid-gap: 68px;
+        .gallery__book{
+            width: 425px;
+            height: 300px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .book__cover img{
+                width: 212px;
+                height: 300px;
+                box-shadow: 0 24px 36px rgba(53, 49, 84, 0.28);
+            }
+            .book__description{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                width: 176px;
+                
+                .book__author{
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 10px;
+                    margin-bottom: 12px;
+                }
+                .book__name{
+                    font-family: 'Montserrat';
+                    font-weight: 700;
+                    font-size: 16px;
+                }
+                .book__summary
+                {
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 10px;
+                    max-height: 42px;
+                    max-width: 176px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-top: 16px;
+                }
+                .book__price{
+                    font-family: 'Montserrat';
+                    font-weight: 600;
+                    font-size: 13px;
+                    margin: 16px 0;
+                }
+                
+                .book__incart{
+                    border: 1px solid #EEEDF5;
+                    color: #5C6A79; 
+                }
+                .book__reviews{
+                    position: relative;
+                    font-family: 'Open Sans';
+                    font-weight: 400;
+                    font-size: 10px;
+                    width: 64%;
+                .book_rating{
+                    
+                    background-color: #EEEDF5;
+                    position: relative;
+                    width: 64px;
+                    height: 12px;
+                    img{
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                    }
+                    .rating__yellow{
+                        background-color: #F2C94C;
+                        height: 12px;
+                    }
+                }
+                    .book__reviews-count {
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        right: 0;
+                    }
+            }
+        }
+        }
+
+    }
+}
